@@ -1,0 +1,8 @@
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\bin\Debug\AS608_UpperComputer.exe
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\bin\Debug\AS608_UpperComputer.pdb
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\obj\Debug\AS608_UpperComputer.AS608_UC.resources
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\obj\Debug\AS608_UpperComputer.Properties.Resources.resources
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\obj\Debug\AS608_UpperComputer.csproj.GenerateResource.Cache
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\obj\Debug\AS608_UpperComputer.exe
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\obj\Debug\AS608_UpperComputer.pdb
+D:\Github\AS608_UpperComputer\AS608_UpperComputer\obj\Debug\AS608_UpperComputer.csprojResolveAssemblyReference.cache
