@@ -48,14 +48,20 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button_GetImage = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button_GenChar2 = new System.Windows.Forms.Button();
+            this.button_GenChar1 = new System.Windows.Forms.Button();
             this.button_UpImage = new System.Windows.Forms.Button();
             this.timer_Debug = new System.Windows.Forms.Timer(this.components);
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label_Capacity = new System.Windows.Forms.Label();
-            this.label_SafetyLevel = new System.Windows.Forms.Label();
             this.label_DatapackageSize = new System.Windows.Forms.Label();
+            this.label_SafetyLevel = new System.Windows.Forms.Label();
+            this.label_Capacity = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.button_Match = new System.Windows.Forms.Button();
+            this.button_UpChar1 = new System.Windows.Forms.Button();
+            this.button_UpChar2 = new System.Windows.Forms.Button();
+            this.comboBox_DataPackageSize = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -147,10 +153,10 @@
             // 
             // textBox_Recv
             // 
-            this.textBox_Recv.Location = new System.Drawing.Point(6, 20);
+            this.textBox_Recv.Location = new System.Drawing.Point(6, 18);
             this.textBox_Recv.Multiline = true;
             this.textBox_Recv.Name = "textBox_Recv";
-            this.textBox_Recv.Size = new System.Drawing.Size(303, 130);
+            this.textBox_Recv.Size = new System.Drawing.Size(303, 132);
             this.textBox_Recv.TabIndex = 0;
             // 
             // groupBox3
@@ -236,6 +242,11 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.button_UpChar2);
+            this.groupBox5.Controls.Add(this.button_UpChar1);
+            this.groupBox5.Controls.Add(this.button_Match);
+            this.groupBox5.Controls.Add(this.button_GenChar2);
+            this.groupBox5.Controls.Add(this.button_GenChar1);
             this.groupBox5.Controls.Add(this.button_UpImage);
             this.groupBox5.Controls.Add(this.button_GetImage);
             this.groupBox5.Location = new System.Drawing.Point(336, 12);
@@ -245,9 +256,29 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "模块操作";
             // 
+            // button_GenChar2
+            // 
+            this.button_GenChar2.Location = new System.Drawing.Point(92, 69);
+            this.button_GenChar2.Name = "button_GenChar2";
+            this.button_GenChar2.Size = new System.Drawing.Size(80, 44);
+            this.button_GenChar2.TabIndex = 8;
+            this.button_GenChar2.Text = "生成特征2";
+            this.button_GenChar2.UseVisualStyleBackColor = true;
+            this.button_GenChar2.Click += new System.EventHandler(this.button_GenChar2_Click);
+            // 
+            // button_GenChar1
+            // 
+            this.button_GenChar1.Location = new System.Drawing.Point(6, 69);
+            this.button_GenChar1.Name = "button_GenChar1";
+            this.button_GenChar1.Size = new System.Drawing.Size(80, 44);
+            this.button_GenChar1.TabIndex = 7;
+            this.button_GenChar1.Text = "生成特征1\r\n";
+            this.button_GenChar1.UseVisualStyleBackColor = true;
+            this.button_GenChar1.Click += new System.EventHandler(this.button_GenChar1_Click);
+            // 
             // button_UpImage
             // 
-            this.button_UpImage.Location = new System.Drawing.Point(92, 19);
+            this.button_UpImage.Location = new System.Drawing.Point(92, 20);
             this.button_UpImage.Name = "button_UpImage";
             this.button_UpImage.Size = new System.Drawing.Size(80, 44);
             this.button_UpImage.TabIndex = 6;
@@ -271,6 +302,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.comboBox_DataPackageSize);
             this.groupBox6.Controls.Add(this.label_DatapackageSize);
             this.groupBox6.Controls.Add(this.label_SafetyLevel);
             this.groupBox6.Controls.Add(this.label_Capacity);
@@ -281,14 +313,14 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "系统参数";
             // 
-            // label_Capacity
+            // label_DatapackageSize
             // 
-            this.label_Capacity.AutoSize = true;
-            this.label_Capacity.Location = new System.Drawing.Point(18, 20);
-            this.label_Capacity.Name = "label_Capacity";
-            this.label_Capacity.Size = new System.Drawing.Size(83, 12);
-            this.label_Capacity.TabIndex = 0;
-            this.label_Capacity.Text = "指纹库容量：0";
+            this.label_DatapackageSize.AutoSize = true;
+            this.label_DatapackageSize.Location = new System.Drawing.Point(18, 54);
+            this.label_DatapackageSize.Name = "label_DatapackageSize";
+            this.label_DatapackageSize.Size = new System.Drawing.Size(77, 12);
+            this.label_DatapackageSize.TabIndex = 2;
+            this.label_DatapackageSize.Text = "数据包大小：";
             // 
             // label_SafetyLevel
             // 
@@ -299,14 +331,14 @@
             this.label_SafetyLevel.TabIndex = 1;
             this.label_SafetyLevel.Text = "安全等级：0";
             // 
-            // label_DatapackageSize
+            // label_Capacity
             // 
-            this.label_DatapackageSize.AutoSize = true;
-            this.label_DatapackageSize.Location = new System.Drawing.Point(18, 54);
-            this.label_DatapackageSize.Name = "label_DatapackageSize";
-            this.label_DatapackageSize.Size = new System.Drawing.Size(83, 12);
-            this.label_DatapackageSize.TabIndex = 2;
-            this.label_DatapackageSize.Text = "数据包大小：0";
+            this.label_Capacity.AutoSize = true;
+            this.label_Capacity.Location = new System.Drawing.Point(18, 20);
+            this.label_Capacity.Name = "label_Capacity";
+            this.label_Capacity.Size = new System.Drawing.Size(83, 12);
+            this.label_Capacity.TabIndex = 0;
+            this.label_Capacity.Text = "指纹库容量：0";
             // 
             // groupBox7
             // 
@@ -317,6 +349,50 @@
             this.groupBox7.TabIndex = 14;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "指纹图像";
+            // 
+            // button_Match
+            // 
+            this.button_Match.Location = new System.Drawing.Point(6, 118);
+            this.button_Match.Name = "button_Match";
+            this.button_Match.Size = new System.Drawing.Size(80, 44);
+            this.button_Match.TabIndex = 9;
+            this.button_Match.Text = "对比指纹";
+            this.button_Match.UseVisualStyleBackColor = true;
+            this.button_Match.Click += new System.EventHandler(this.button_Match_Click);
+            // 
+            // button_UpChar1
+            // 
+            this.button_UpChar1.Location = new System.Drawing.Point(6, 168);
+            this.button_UpChar1.Name = "button_UpChar1";
+            this.button_UpChar1.Size = new System.Drawing.Size(80, 44);
+            this.button_UpChar1.TabIndex = 10;
+            this.button_UpChar1.Text = "上传特征1";
+            this.button_UpChar1.UseVisualStyleBackColor = true;
+            this.button_UpChar1.Click += new System.EventHandler(this.button_UpChar1_Click);
+            // 
+            // button_UpChar2
+            // 
+            this.button_UpChar2.Location = new System.Drawing.Point(92, 168);
+            this.button_UpChar2.Name = "button_UpChar2";
+            this.button_UpChar2.Size = new System.Drawing.Size(80, 44);
+            this.button_UpChar2.TabIndex = 11;
+            this.button_UpChar2.Text = "上传特征2";
+            this.button_UpChar2.UseVisualStyleBackColor = true;
+            this.button_UpChar2.Click += new System.EventHandler(this.button_UpChar2_Click);
+            // 
+            // comboBox_DataPackageSize
+            // 
+            this.comboBox_DataPackageSize.FormattingEnabled = true;
+            this.comboBox_DataPackageSize.Items.AddRange(new object[] {
+            "32Bytes",
+            "64Bytes",
+            "128Bytes",
+            "256Bytes"});
+            this.comboBox_DataPackageSize.Location = new System.Drawing.Point(90, 50);
+            this.comboBox_DataPackageSize.Name = "comboBox_DataPackageSize";
+            this.comboBox_DataPackageSize.Size = new System.Drawing.Size(74, 20);
+            this.comboBox_DataPackageSize.TabIndex = 3;
+            this.comboBox_DataPackageSize.SelectedIndexChanged += new System.EventHandler(this.comboBox_DataPackageSize_SelectedIndexChanged);
             // 
             // AS608_UC
             // 
@@ -377,6 +453,12 @@
         private System.Windows.Forms.Label label_SafetyLevel;
         private System.Windows.Forms.Label label_Capacity;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button button_GenChar2;
+        private System.Windows.Forms.Button button_GenChar1;
+        private System.Windows.Forms.Button button_Match;
+        private System.Windows.Forms.Button button_UpChar2;
+        private System.Windows.Forms.Button button_UpChar1;
+        private System.Windows.Forms.ComboBox comboBox_DataPackageSize;
 
     }
 }
